@@ -13,6 +13,9 @@ namespace Tempo
             Stopwatch chrono2 = Stopwatch.StartNew();
             
             chrono1.Start();
+            Thread.Sleep(500);
+            chrono2.Start();
+            Thread.Sleep(300);
         }
     }
 }
