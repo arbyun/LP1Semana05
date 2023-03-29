@@ -20,7 +20,7 @@ namespace RandomDice
                 Console.WriteLine($"You've rolled {nextRoll} for die number {i}.");
             }
             
-            
+            Console.WriteLine($"In total, your {n} dice(s) sum {soma}.");
 
         }
     }
