@@ -17,16 +17,23 @@ namespace UpperUnion
             else
             {
                 // Now we convert all strings to uppercase + order them alphabetically
-                Array.Sort(args, StringComparer.OrdinalIgnoreCase);
+                string[] uppercaseArgs = new string[args.Length];
+
+                for (int i = 0; i < args.Length; i++)
+                {
+                    uppercaseArgs[i] = args[i].ToUpper();
+                }
+
+                Array.Sort(uppercaseArgs, StringComparer.OrdinalIgnoreCase);
                 
                 // Use StringBuilder to join the strings with a hyphen
                 var stringBuilding = new StringBuilder();
-                stringBuilding.Append(args[0]);
+                stringBuilding.Append(uppercaseArgs[0]);
                 
-                for (int i = 1; i < args.Length; i++)
+                for (int i = 1; i < uppercaseArgs.Length; i++)
                 {
                     stringBuilding.Append('-');
-                    stringBuilding.Append(args[i]);
+                    stringBuilding.Append(uppercaseArgs[i]);
                 }
 
                 // And then we print the final united string
