@@ -15,7 +15,8 @@ namespace UpperUnion
             }
             else
             {
-                
+                // Now we convert all strings to uppercase + order them alphabetically
+                Array.Sort(args, StringComparer.OrdinalIgnoreCase);
             }
             
         }
